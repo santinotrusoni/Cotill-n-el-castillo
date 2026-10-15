@@ -1,0 +1,788 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* ===== HEADER PRO ===== */
+
+/* ===== HEADER EXACTO ===== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 120px 18px 120px; /* proporción exacta */
+
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+
+  border-bottom: 1px solid rgba(255, 46, 46, 0.25);
+}
+
+/* LOGO EXACTO */
+.logo {
+  height: 68px;   /* tamaño correcto visual */
+  width: auto;
+
+  display: block;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 42px; /* separación exacta */
+}
+
+/* LINKS */
+nav a {
+  color: #8a8a8a;
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* HOVER */
+nav a:hover {
+  color: #fff;
+}
+
+/* ACTIVO */
+nav a.active {
+  color: #ff2e2e;
+}
+
+/* SUBRAYADO EXACTO */
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 2px;
+  background: #ff2e2e;
+  box-shadow: 0 0 6px rgba(255, 46, 46, 0.8);
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  background: #000;
+}
+
+/* CANVAS 3D DE FONDO */
+#hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+}
+
+/* DEGRADADO ENCIMA DEL 3D PARA QUE EL TEXTO SE LEA BIEN */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(0,0,0,0.85) 65%, rgba(0,0,0,0.35) 100%);
+}
+
+/* TEXTO HERO */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.hero-text span {
+  color: #ff2e2e;
+}
+
+.hero-text p {
+  margin: 30px 0;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  max-width: 500px;
+}
+
+/* BOTON */
+.btn {
+  border: 1px solid #ff2e2e;
+  padding: 16px 32px;
+  color: #ff2e2e;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff2e2e;
+  color: black;
+  box-shadow: 0 0 25px #ff2e2e88;
+}
+
+/* ===== ABOUT EXACTO ===== */
+
+.about {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 100px;
+  padding: 160px 120px;
+  align-items: center;
+}
+
+/* ===== ABOUT LEFT EXACTO ===== */
+
+.about-left {
+  max-width: 650px; /* probá entre 600 y 700 */
+}
+/* SOBRE MI */
+.section-label {
+  color: #ff2e2e !important;
+}
+
+/* TITULO */
+.about-left h2 {
+  font-size: 2.4rem;   /* antes ~3.2 → ahora más chico */
+  line-height: 1.2;    /* más espacio entre líneas */
+  font-weight: 700;
+  margin-bottom: 35px; /* un poco más de separación abajo */
+}
+
+/* PÁRRAFOS */
+.about-left p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #9a9a9a;        /* gris exacto */
+  margin-bottom: 30px;
+}
+
+/* PRIMER BLOQUE MÁS VISIBLE */
+.about-left p:first-of-type {
+  color: #b5b5b5;
+}
+
+.about {
+  gap: 120px; /* más separación con la card */
+}
+
+.about-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 55px 45px;
+
+  background: linear-gradient(145deg, #0b0b0b, #111);
+  border-radius: 16px;
+
+  border: 1px solid rgba(255, 46, 46, 0.2);
+
+  box-shadow:
+    0 0 60px rgba(255, 46, 46, 0.08),
+    inset 0 0 25px rgba(255, 46, 46, 0.05);
+
+  position: relative;
+}
+
+.about-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+/* SOLO EL LOGO */
+.about-icon img {
+  width: 200px; /* ajustá tamaño acá */
+  height: auto;
+
+  /* glow rojo tipo pro */
+ 
+}
+
+
+/* BORDE GLOW PRO */
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 46, 46, 0.15);
+  pointer-events: none;
+}
+
+/* LISTA */
+.about-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-card li {
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  opacity: 0.9;
+}
+
+/* ICONOS ROJOS COMO EN LA IMAGEN */
+.about-card i {
+  color: #ff2e2e;
+
+  font-size: 16px; /* tamaño del icono */
+  
+  width: 34px;     /* caja más grande */
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 46, 46, 0.35);
+  border-radius: 8px;
+
+  background: rgba(255, 46, 46, 0.1);
+}
+
+
+
+
+
+/* ===== SERVICES PRO ===== */
+
+.services {
+  padding: 120px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.service-card {
+  background: #0a0a0a;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 46, 46, 0.15);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.service-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+/* HOVER PRO */
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff2e2e;
+  box-shadow: 0 0 25px rgba(255, 46, 46, 0.2);
+}
+
+/* BOTON */
+.services-btn {
+  margin-top: 50px;
+}
+
+
+
+
+
+/* ===== PROJECTS (INDEX) ===== */
+
+.projects {
+  padding: 120px;
+}
+
+/* GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* IMAGEN */
+.project-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* OVERLAY */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.2)
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 20px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* TEXTO */
+.project-overlay h3 {
+  margin-bottom: 5px;
+}
+
+.project-overlay p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* HOVER */
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* BOTON */
+.projects-more {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+
+
+
+/* ===== FOOTER PRO ===== */
+
+.footer {
+  background: #000;
+  margin-top: 120px;
+}
+
+/* línea superior */
+.footer-top-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff2e2e, transparent);
+  box-shadow: 0 0 15px #ff2e2e;
+}
+
+/* layout */
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 60px;
+  padding: 80px 120px;
+}
+
+/* logo */
+.logo-footer {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+/* texto marca */
+.footer-brand p {
+  font-size: 0.9rem;
+  color: #888;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+/* títulos */
+.footer h4 {
+  color: #ff2e2e;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+/* links */
+.footer-links a {
+  display: block;
+  color: #888;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff2e2e;
+}
+
+/* contacto */
+.footer-contact p {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+/* bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid rgba(255, 46, 46, 0.2);
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* LINKS CON ICONO */
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #888;
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+/* ICONOS */
+.footer-links i {
+  color: #ff2e2e;
+  font-size: 12px;
+  min-width: 14px;
+}
+
+/* PUNTITO EXTRA (detalle fino) */
+.footer-links a::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #ff2e2e;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+/* HOVER PRO */
+.footer-links a:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.footer-links a:hover i {
+  text-shadow: 0 0 8px #ff2e2e;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===== SERVICE CARD PERFECTA ===== */
+
+.service-card {
+  background: #0a0a0a;
+  padding: 35px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 46, 46, 0.15);
+  transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* IMPORTANTE */
+  justify-content: flex-start;
+}
+
+/* CONTENEDOR ICONO */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 46, 46, 0.08);
+  border: 1px solid rgba(255, 46, 46, 0.25);
+
+  margin-bottom: 22px; /* separación perfecta */
+}
+
+/* SVG PERFECTO */
+.icon-box svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* OPCIONAL: animación sutil */
+.service-card:hover svg {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* TITULO */
+.service-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+/* TEXTO */
+.service-card p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* HOVER PRO */
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: #ff2e2e;
+  box-shadow: 0 0 25px rgba(255, 46, 46, 0.2);
+}
+
+.service-card:hover .icon-box {
+  box-shadow: 0 0 15px rgba(255, 46, 46, 0.35);
+}
+
+/* ===== MODAL IMAGEN ===== */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+/* ACTIVO */
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* IMAGEN GRANDE */
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+
+  box-shadow: 0 0 40px rgba(255,46,46,0.3);
+}
+
+/* HOVER CURSOR */
+.project-card img {
+  cursor: pointer;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  /* ===== HEADER ===== */
+  .header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 0 20px;
+    text-align: center;
+    justify-content: center;
+    background-position: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+
+  /* ===== ABOUT ===== */
+  .about {
+    grid-template-columns: 1fr;
+    padding: 80px 20px;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .about-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-card {
+    margin: 0 auto;
+  }
+
+  /* ===== SERVICES ===== */
+  .services {
+    padding: 80px 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== PROJECTS ===== */
+  .projects {
+    padding: 80px 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 1024px) {
+
+  .header {
+    padding: 20px 40px;
+  }
+
+  .hero {
+    padding: 0 40px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    padding: 120px 40px;
+  }
+
+  .services {
+    padding: 100px 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects {
+    padding: 100px 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 40px;
+  }
+}
+
+
+
+
+
+

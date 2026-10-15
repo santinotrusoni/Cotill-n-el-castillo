@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyectos | FlatSixDev</title>
+
+  <link rel="stylesheet" href="proyectos.css">
+</head>
+
+<body>
+
+  <!-- HEADER (copialo igual) -->
+  <header class="header">
+    <img src="assets/logo.png" class="logo">
+
+    <nav>
+      <a href="index.html">INICIO</a>
+      <a href="index.html#about">SOBRE MÍ</a>
+      <a href="index.html#services">SERVICIOS</a>
+      <a href="proyectos.html" class="active">PROYECTOS</a>
+      <a href="index.html#contact">CONTACTO</a>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO -->
+  <section class="projects-page">
+
+    <h1>PROYECTOS</h1>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="assets/proyect3.jpg"onclick="openModal(this.src)">
+        <h3>E-commerce</h3>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/proyect4.jpg"onclick="openModal(this.src)">
+        <h3>Landing Page</h3>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/proyect1.jpg"onclick="openModal(this.src)">
+        <h3>Sistema Web</h3>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/proyect2.jpg"onclick="openModal(this.src)">
+        <h3>Catálogo web</h3>
+      </div>
+
+       <div class="project-card">
+        <img src="assets/proyect5.jpg"onclick="openModal(this.src)">
+        <h3>Creacion de IA</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div id="imgModal" class="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(src) {
+  const modal = document.getElementById("imgModal");
+  const img = document.getElementById("modalImg");
+
+  img.src = src;
+  modal.classList.add("active");
+}
+
+function closeModal() {
+  document.getElementById("imgModal").classList.remove("active");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlatSixDev</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="proyectos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+
+</head>
+<body>
+
+
+<header class="header">
+  <img src="assets/logo.png" class="logo" alt="FlatSixDev Logo">
+
+ <nav>
+  <a href="#" class="active">INICIO</a>
+  <a href="#about">SOBRE MÍ</a>
+  <a href="#services">SERVICIOS</a>
+  <a href="proyectos.html" class="active">PROYECTOS</a>
+  <a href="#contact">CONTACTO</a>
+</nav>
+</header>
+
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-text">
+
+    <h1>
+      DESARROLLO WEB <br>
+      <span>DE ALTO RENDIMIENTO</span>
+    </h1>
+
+    <p>
+      Soluciones digitales modernas, rápidas y diseñadas
+      para llevar tu negocio al siguiente nivel.
+    </p>
+
+    <a href="#contact" class="btn">HABLEMOS DE TU PROYECTO</a>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="about" class="about">
+
+  <div class="about-left">
+    <h2 class="section-label">SOBRE MÍ</h2>
+
+    <h2>
+      Ingeniería digital.<br>
+      Precisión en cada línea de código.
+    </h2>
+
+    <p>
+      En FlatSixDev transformo ideas en soluciones digitales potentes, modernas y eficientes.
+      Me especializo en el desarrollo de sitios web, sistemas a medida, tiendas online y automatizaciones.
+    </p>
+
+    <p>
+      Combino diseño, tecnología y estrategia para crear experiencias rápidas, seguras y enfocadas en el crecimiento.
+    </p>
+
+    <p>
+      Cada proyecto es desarrollado con atención al detalle, buenas prácticas y mentalidad de performance.
+    </p>
+  </div>
+
+  <div class="about-right">
+    <div class="about-card">
+
+       <!-- 🔴 LOGO -->
+    <div class="about-icon">
+      <img src="assets/logo6.png" alt="logo">
+    </div>
+
+     <ul>
+  <li><i class="fas fa-code"></i> Código limpio y escalable</li>
+  <li><i class="fas fa-paint-brush"></i> Diseño moderno y funcional</li>
+  <li><i class="fas fa-gauge-high"></i> Rendimiento y optimización</li>
+  <li><i class="fas fa-shield-halved"></i> Seguridad y buenas prácticas</li>
+  <li><i class="fas fa-puzzle-piece"></i> Soluciones a medida</li>
+  <li><i class="fas fa-chart-line"></i> Enfoque en resultados</li>
+</ul>
+    </div>
+  </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+<section id="services" class="services">
+
+  <p class="section-label center">SERVICIOS</p>
+  <h2 class="section-title center">Soluciones que impulsan tu negocio.</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="icon-box">🌐</div>
+      <h3>DESARROLLO WEB</h3>
+      <p>Sitios modernos, rápidos y optimizados para convertir visitantes en clientes.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-box">🛒</div>
+      <h3>TIENDAS ONLINE</h3>
+      <p>E-commerce personalizados, seguros y preparados para escalar.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-box">💻</div>
+      <h3>SISTEMAS A MEDIDA</h3>
+      <p>Plataformas adaptadas a procesos específicos de tu negocio.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-box">⚙️</div>
+      <h3>AUTOMATIZACIÓN</h3>
+      <p>Optimización de flujos para ahorrar tiempo y aumentar productividad.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-box">📈</div>
+      <h3>OPTIMIZACIÓN & SEO</h3>
+      <p>Mejor rendimiento, velocidad y posicionamiento en buscadores.</p>
+    </div>
+
+    <div class="service-card">
+  <div class="icon-box">🗄️</div>
+  <h3>BASES DE DATOS</h3>
+  <p>Diseño, optimización y gestión de bases de datos seguras y escalables para aplicaciones modernas.</p>
+</div>
+
+<div class="service-card">
+  <div class="icon-box">🤖</div>
+  <h3>INTELIGENCIA ARTIFICIAL</h3>
+  <p>Implementación de soluciones con IA para automatización, análisis de datos y mejora de procesos.</p>
+</div>
+
+  </div>
+
+</section>
+
+<section id="projects" class="projects">
+
+  <h2 class="section-title center">PROYECTOS</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="assets/proyect5.jpg" alt="">
+      <div class="project-overlay">
+        <h3>Creacion de IA</h3>
+        <p>IA de ayuda estilo "chat GPT"</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/proyect4.jpg" alt="">
+      <div class="project-overlay">
+        <h3>Landing Page</h3>
+        <p>Diseño enfocado en conversión</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/proyect1.jpg" alt="">
+      <div class="project-overlay">
+        <h3>Sistema Web</h3>
+        <p>Gestión personalizada</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTON VER MÁS -->
+  <div class="projects-more">
+    <a href="proyectos.html" class="btn">VER TODOS LOS PROYECTOS</a>
+  </div>
+
+</section>
+
+<footer class="footer" id="contact">
+
+  <div class="footer-top-line"></div>
+
+  <div class="footer-container">
+
+  <!-- MARCA -->
+  <div class="footer-brand">
+    <img src="assets/logo.png" class="logo-footer">
+    <p>
+      Desarrollo soluciones digitales de alto rendimiento
+      enfocadas en resultados, escalabilidad y crecimiento.
+    </p>
+  </div>
+
+  <!-- ENLACES -->
+ <div class="footer-links">
+  <h4>NAVEGACIÓN</h4>
+  <a href="#"><i class="fas fa-house"></i> Inicio</a>
+  <a href="#about"><i class="fas fa-user"></i> Sobre mí</a>
+  <a href="#services"><i class="fas fa-briefcase"></i> Servicios</a>
+  <a href="#"><i class="fas fa-code"></i> Proyectos</a>
+  <a href="#contact"><i class="fas fa-envelope"></i> Contacto</a>
+</div>
+
+  <!-- SERVICIOS -->
+  <div class="footer-links">
+  <h4>SERVICIOS</h4>
+  <a href="#services"><i class="fas fa-globe"></i> Desarrollo Web</a>
+  <a href="#services"><i class="fas fa-cart-shopping"></i> E-commerce</a>
+  <a href="#services"><i class="fas fa-layer-group"></i> Sistemas a medida</a>
+  <a href="#services"><i class="fas fa-database"></i> Bases de datos</a>
+  <a href="#services"><i class="fas fa-robot"></i> Inteligencia Artificial</a>
+</div>
+
+  <!-- CONTACTO -->
+  <div class="footer-contact">
+  <h4>CONTACTO</h4>
+
+  <a href="https://wa.me/5491136988959" class="whatsapp-contact" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+    <div>
+      <span>Contactar por WhatsApp</span>
+      <small>Respuesta rápida</small>
+    </div>
+  </a>
+
+  <a href="mailto:flatsixdev@gmail.com" class="email-contact">
+  <i class="fas fa-envelope"></i>
+
+  <div>
+    <span>Enviar Email</span>
+    <small>Respuesta en 24hs</small>
+  </div>
+</a>
+
+  <p><i class="fas fa-location-dot"></i> Buenos Aires, Argentina</p>
+</div>
+
+</footer>
+
+
+<script>
+function openModal(src) {
+  const modal = document.getElementById("imgModal");
+  const img = document.getElementById("modalImg");
+
+  img.src = src;
+  modal.classList.add("active");
+}
+
+function closeModal() {
+  document.getElementById("imgModal").classList.remove("active");
+}
+</script>
+
+<script type="module" src="hero3d.js"></script>
+
+
+</body>
+</html>
